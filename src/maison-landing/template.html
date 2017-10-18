@@ -1,0 +1,14 @@
+ <postcss src="./style.postcss"></postcss> 
+<div id="landing-container">
+    <img src="../../asset/cover_home.jpg" alt="" />
+</div>
+<modal-clab
+         visible
+         primary="Login"
+         classic="true"
+         title="Login"
+>
+    <template is="dom-repeat" items="[[loginModalInputs]]">
+        <maison-input index="[[index]]" params="[[item]]"></maison-input>
+    </template>
+</modal-clab>

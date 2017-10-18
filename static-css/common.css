@@ -1,0 +1,31 @@
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Overriding modal style to fit our needs */
+.modal-wrapper {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.modal-clab .btn.primary {
+  background-color: #2f889a;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-body input {
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+button {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}

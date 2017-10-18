@@ -1,0 +1,19 @@
+<postcss src="./style.postcss"></postcss>
+
+<template is="dom-if" if="[[params.label]]">
+    <label for$="[[params.name]]">[[params.label]]</label>
+</template>
+<select
+        name$="[[params.name]]"
+>
+    <template is="dom-repeat" items="[[params.value]]">
+        <option value$="[[item]]">[[item]]</option>
+    </template>
+</select>
+<template is="dom-if" if="[[params.validation.isVisible]]">
+    <ul class="error-list">
+        <template is="dom-repeat" items="[[params.validation.errorMessages]]">
+            <li>[[item]]</li>
+        </template>
+    </ul>
+</template>

@@ -1,0 +1,14 @@
+ <postcss src="./style.postcss"></postcss>
+ <div class="form-container">
+     <template is="dom-repeat" items="[[registrationFormInput]]">
+         <template is="dom-if" if="[[getInputType(item.type,'textbox')]]">
+             <maison-input index="[[index]]" params="[[item]]"></maison-input>
+         </template>
+         <template is="dom-if" if="[[getInputType(item.type,'select')]]">
+             <maison-select-option params="[[item]]"></maison-select-option>
+         </template>
+         <template is="dom-if" if="[[getInputType(item.type,'date')]]">
+             <maison-input-date params="[[item]]"></maison-input-date>
+         </template>
+     </template>
+ </div>

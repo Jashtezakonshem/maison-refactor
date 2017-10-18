@@ -1,0 +1,1 @@
+export const errColor = '#F44336';

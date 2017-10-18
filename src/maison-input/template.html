@@ -1,0 +1,21 @@
+ <postcss src="./style.postcss"></postcss>
+
+<template is="dom-if" if="[[params.label]]">
+    <label for$="[[params.name]]">[[params.label]]</label>
+</template>
+<input
+     name$="[[params.name]]"
+     value="[[params.value]]"
+     on-focusin="_hideErrorMessages"
+     style$="border-color: [[colorInputForErr(params.validation.isVisible)]]"
+     on-keyup="_updateValue"
+     type="text"
+     placeholder$="[[params.placeholder]]"
+/>
+<template is="dom-if" if="[[params.validation.isVisible]]">
+    <ul class="error-list">
+        <template is="dom-repeat" items="[[params.validation.errorMessages]]">
+            <li>[[item]]</li>
+        </template>
+    </ul>
+</template>
