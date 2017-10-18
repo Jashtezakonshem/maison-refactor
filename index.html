@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <title>maison</title>
+    <meta name="description" content="maison">
+    <link rel="stylesheet" href="static-css/contactlab-pattern.min.css">
+    <link rel="stylesheet" type="text/css" href="static-css/common.css">
+    <link rel="stylesheet" href="static-css/ikonograph.min.css">
+    <script>
+        window.ShadyDOM = { force: true };
+        window.customElements = { forcePolyfill: true };
+    </script>
+    <!--import polymer custom elements-->
+    <script>
+        window.addEventListener('WebComponentsReady', () => {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = "bundle/bundle.js";
+            document.body.appendChild(script);
+        });
+    </script>
+    <script src="static-js/web-animations-next.min.js"></script>
+    <script src="static-js/webcomponents-lite.js"></script>
+</head>
+<body>
+<maison-root></maison-root>
+</body>
+</html>
